@@ -5,12 +5,14 @@ import { Box } from "@chakra-ui/react";
 import { Center } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import { Container } from "@chakra-ui/react";
+import UploadAndDisplayImage from "./UploadFunction";
 
 const UploadPage = () => {
   //click hidden input
   const handleClick = () => {
     document.getElementById("imageFile").click();
   };
+
   return (
     <div>
       <VStack spacing={4} align="stretch">
@@ -39,26 +41,10 @@ const UploadPage = () => {
 
         <Box h="80px">
           <Center h="20px" color="white">
-            <Button
-              onClick={() => {
-                handleClick();
-              }}
-              colorScheme="teal"
-              variant="solid"
-            >
-              Click here to upload
-            </Button>
+            <UploadAndDisplayImage />
           </Center>
         </Box>
       </VStack>
-
-      <input
-        type="file"
-        id="imageFile"
-        capture="environment"
-        accept="image/*"
-        hidden
-      />
     </div>
   );
 };
