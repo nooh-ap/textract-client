@@ -7,9 +7,26 @@ const UploadAndDisplayImage = () => {
     document.getElementById("imageFile").click();
   };
 
+  const url = "https://d5ggcgl4u4.execute-api.us-east-1.amazonaws.com/test/textract/analyzereciept"
+  const handleUpload = () => {
+      const formData = new FormData();
+      formData.append("image", selectedImage);
+      fetch(url, {
+            method: "POST",
+            body: formData,
+          })
+            .then((response) => response.json())
+            .then((result) => {
+                  console.log("Success:", result);
+                })
+                .catch((error) => {
+                      console.error("Error:", error);
+                    });
+                };
+    
+  
   return (
     <div>
-      <h1>Upload and Display Image usign React Hook's</h1>
 
       <Center h="20px" color="white">
         <Button
@@ -21,22 +38,14 @@ const UploadAndDisplayImage = () => {
         >
           Click here to upload
         </Button>
-      </Center>
-      {/* {selectedImage && (
-        <div>
-          <img
-            alt="not found"
-            width={"250px"}
-            src={URL.createObjectURL(selectedImage)}
-          />
-          <br />
-          <button onClick={() => setSelectedImage(null)}>Remove</button>
-        </div>
-      )} */}
+      </Center>      
 
       <br />
       <br />
 
+      {/*  Input image file */}
+        <input type="file" accept="image/*"/>
+        
       <input
         type="file"
         id="imageFile"

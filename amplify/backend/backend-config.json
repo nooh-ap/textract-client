@@ -1,1 +1,9 @@
-{}
+{
+  "function": {
+    "textractclient5d57f1e6": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  }
+}

@@ -2,14 +2,14 @@
   "providers": [
     "awscloudformation"
   ],
-  "projectName": "reciepttracker",
+  "projectName": "textractclient",
   "version": "3.1",
   "frontend": "javascript",
   "javascript": {
     "framework": "react",
     "config": {
       "SourceDir": "src",
-      "DistributionDir": "public",
+      "DistributionDir": "build",
       "BuildCommand": "npm run-script build",
       "StartCommand": "npm run-script start"
     }
