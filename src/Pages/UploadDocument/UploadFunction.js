@@ -42,9 +42,6 @@ const UploadAndDisplayImage = () => {
       <br />
       <br />
 
-      {/*  Input image file */}
-        <input type="file" accept="image/*"/>
-        
       <input
         type="file"
         id="imageFile"

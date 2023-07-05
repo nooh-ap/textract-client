@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b167149-6b7b-485d-a325-79ef984c939e" name="Changes" comment="">
+    <list default="true" id="9b167149-6b7b-485d-a325-79ef984c939e" name="Changes" comment="&quot;Updated UploadFunction.js to upload image file instead of camera&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/UploadDocument/UploadFunction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/UploadDocument/UploadFunction.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/UploadDocument/UploadPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/UploadDocument/UploadPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +31,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2S8J5AXSTRNt7Y4HUc166MpclVD" />
   <component name="ProjectViewState">
@@ -96,12 +92,25 @@
       <updated>1688522090533</updated>
       <workItem from="1688522093195" duration="1099000" />
       <workItem from="1688529027349" duration="3241000" />
-      <workItem from="1688532586334" duration="2111000" />
+      <workItem from="1688532586334" duration="3409000" />
     </task>
+    <task id="LOCAL-00001" summary="&quot;Updated UploadFunction.js to upload image file instead of camera&quot;">
+      <option name="closed" value="true" />
+      <created>1688534871858</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688534871858</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;Updated UploadFunction.js to upload image file instead of camera&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Updated UploadFunction.js to upload image file instead of camera&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
