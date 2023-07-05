@@ -1,16 +1,7 @@
-import {
-    Box,
-    chakra,
-    Container,
-    Stack,
-    Text,
-    useColorModeValue,
-    VisuallyHidden,
-  } from '@chakra-ui/react';
-  import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
-  import { ReactNode } from 'react';
-  
-  const Logo = (props) => {
+import {Box, chakra, Container, Stack, Text, useColorModeValue, VisuallyHidden,} from '@chakra-ui/react';
+import {FaInstagram, FaTwitter, FaYoutube} from 'react-icons/fa';
+
+const Logo = (props) => {
     return (
       <svg
         height={32}

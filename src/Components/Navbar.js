@@ -243,7 +243,6 @@ import {
     );
   };
 
-
   const NAV_ITEMS = [
     {
       label: 'Inspiration',
