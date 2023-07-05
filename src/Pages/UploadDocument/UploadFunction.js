@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Button, Center } from "@chakra-ui/react";
+import React, {useState} from "react";
+import {Button, Center} from "@chakra-ui/react";
 
 const UploadAndDisplayImage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -26,8 +26,7 @@ const UploadAndDisplayImage = () => {
     
   
   return (
-    <div>
-
+      <div>
       <Center h="20px" color="white">
         <Button
           onClick={() => {
@@ -36,7 +35,7 @@ const UploadAndDisplayImage = () => {
           colorScheme="teal"
           variant="solid"
         >
-          Click here to upload
+          Click here to upload now
         </Button>
       </Center>      
 
@@ -49,7 +48,6 @@ const UploadAndDisplayImage = () => {
       <input
         type="file"
         id="imageFile"
-        capture="environment"
         accept="image/*"
         onChange={(event) => {
           console.log(event.target.files[0]);
