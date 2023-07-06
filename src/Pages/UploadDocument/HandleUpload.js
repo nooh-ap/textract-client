@@ -1,6 +1,11 @@
 import {useState} from "react";
 import {Button, Center} from "@chakra-ui/react";
 
+const headers = {
+    "Content-Type": "multipart/form-data",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "*",
+};
 
 const url = "https://d5ggcgl4u4.execute-api.us-east-1.amazonaws.com/test/textract/analyzereciept"
 const uploadFileToAWS = (file) => {
@@ -8,6 +13,8 @@ const uploadFileToAWS = (file) => {
     formData.append("image", file);
     fetch(url, {
         method: "POST",
+        mode: "cors",
+        headers: headers,
         body: formData,
     })
         .then((response) => response.json())
