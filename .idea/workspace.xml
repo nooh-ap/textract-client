@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9b167149-6b7b-485d-a325-79ef984c939e" name="Changes" comment="&quot;fix: remove the extra upload button&quot;">
-      <change afterPath="$PROJECT_DIR$/src/Components/Table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/Dashboard/Dashboard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/UploadDocument/HandleUpload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/textract-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/textract-client.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Navbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/UploadDocument/UploadFunction.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/UploadDocument/UploadPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/UploadDocument/UploadPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/previews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/previews.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,25 +51,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Notification.DisplayName-DoNotAsk-Dependencies from package.json&quot;: &quot;Dependencies from package.json available&quot;,
-    &quot;Notification.DoNotAsk-Dependencies from package.json&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/noohalmahfoodi/RiderProjects/textract-client&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Notification.DisplayName-DoNotAsk-Dependencies from package.json": "Dependencies from package.json available",
+    "Notification.DoNotAsk-Dependencies from package.json": "true",
+    "ReactCreateComponentLastSelected": "arrowFunctionComponent",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/noohalmahfoodi/RiderProjects/textract-client",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -94,7 +107,7 @@
       <workItem from="1688522093195" duration="1099000" />
       <workItem from="1688529027349" duration="3241000" />
       <workItem from="1688532586334" duration="9191000" />
-      <workItem from="1688616797795" duration="541000" />
+      <workItem from="1688616797795" duration="8428000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Updated UploadFunction.js to upload image file instead of camera&quot;">
       <option name="closed" value="true" />
@@ -133,20 +146,5 @@
     <MESSAGE value="&quot;Updated UploadFunction.js to upload image file instead of camera&quot;" />
     <MESSAGE value="&quot;fix: remove the extra upload button&quot;" />
     <option name="LAST_COMMIT_MESSAGE" value="&quot;fix: remove the extra upload button&quot;" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/App.js</url>
-          <line>9</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/App.js</url>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

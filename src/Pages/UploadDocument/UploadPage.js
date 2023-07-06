@@ -1,11 +1,7 @@
 import {Box, Center, Container, Heading, Stack, Text, VStack} from "@chakra-ui/react";
-import UploadAndDisplayImage from "./UploadFunction";
+import HandleUpload from "./HandleUpload";
 
 const UploadPage = () => {
-  //click hidden input
-  const handleClick = () => {
-    document.getElementById("imageFile").click();
-  };
 
   return (
     <div>
@@ -35,7 +31,7 @@ const UploadPage = () => {
 
         <Box h="80px">
           <Center h="20px" color="white">
-            <UploadAndDisplayImage />
+            <HandleUpload />
           </Center>
         </Box>
       </VStack>
