@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9b167149-6b7b-485d-a325-79ef984c939e" name="Changes" comment="&quot;fix: remove the extra upload button&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/UploadDocument/HandleUpload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/UploadDocument/HandleUpload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +96,7 @@
       <workItem from="1688529027349" duration="3241000" />
       <workItem from="1688532586334" duration="9191000" />
       <workItem from="1688616797795" duration="9189000" />
-      <workItem from="1688632459447" duration="9238000" />
+      <workItem from="1688632459447" duration="9702000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Updated UploadFunction.js to upload image file instead of camera&quot;">
       <option name="closed" value="true" />
