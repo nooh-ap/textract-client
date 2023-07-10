@@ -1,42 +1,44 @@
+import {Table, TableCaption, TableContainer, Tbody, Td, Th, Thead, Tr,} from '@chakra-ui/react'
+import {useEffect} from "react";
 
-import {Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr,} from '@chakra-ui/react'
 
-const TableComponent = (head, rows) => {
+// TODO: Make form editable;
+const TableComponent = ({sharedData}) => {
+    let expensesKeys = [] ;
+    if (sharedData !== null) {
+        expensesKeys = Object.keys(sharedData['expenses'][0])
+    }
+
+    useEffect(() => {
+        console.log(sharedData);
+    }, [sharedData]);
+
     return (
         <TableContainer>
             <Table variant='simple'>
                 <TableCaption>Items bought in this store</TableCaption>
                 <Thead>
                     <Tr>
-                        <Th>Items</Th>
-                        <Th>Price</Th>
-                        <Th isNumeric>Quantity</Th>
+                        {sharedData !== null && expensesKeys.map((key, index) => {
+                            return <Th key={index}>{key}</Th>;
+                        })}
                     </Tr>
                 </Thead>
                 <Tbody>
-                    <Tr>
-                        <Td>inches</Td>
-                        <Td>$23 (mm)</Td>
-                        <Td isNumeric>25.4</Td>
-                    </Tr>
-                    <Tr>
-                        <Td>feet</Td>
-                        <Td>centimetres (cm)</Td>
-                        <Td isNumeric>30.48</Td>
-                    </Tr>
-                    <Tr>
-                        <Td>yards</Td>
-                        <Td>metres (m)</Td>
-                        <Td isNumeric>0.91444</Td>
-                    </Tr>
+                    {
+                        sharedData !== null &&
+                        sharedData['expenses'].map((expense, index) => {
+                            return (
+                                <Tr key={index}>
+                                    {expensesKeys.map((key, index) => {
+                                        return <Td key={index}>{expense[key]}</Td>;
+                                    })}
+                                </Tr>
+                            );
+                        })
+                    }
+                {/*    TODO: Add total */}
                 </Tbody>
-                {/*<Tfoot>*/}
-                {/*    <Tr>*/}
-                {/*        <Th>To convert</Th>*/}
-                {/*        <Th>into</Th>*/}
-                {/*        <Th isNumeric>multiply by</Th>*/}
-                {/*    </Tr>*/}
-                {/*</Tfoot>*/}
             </Table>
         </TableContainer>
     );

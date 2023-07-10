@@ -8,7 +8,6 @@ export const Dashboard = () => {
 			<div>
 				<Container>
 					<UploadPage />
-					<TableComponent />
 				</Container>
 			</div>
 		</>
