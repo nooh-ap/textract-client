@@ -36,7 +36,11 @@ const UploadPage = () => {
             </Text>
           </Stack>
         </Container>
-        <HandleUpload sendDataToParent={handleDataFromChild} />
+        <Box h="80px">
+          <Center h="20px" color="white">
+            <HandleUpload />
+          </Center>
+        </Box>
         <TableComponent sharedData={dataFromChild} />
       </VStack>
     </div>
