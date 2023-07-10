@@ -38,7 +38,7 @@ const UploadPage = () => {
         </Container>
         <Box h="80px">
           <Center h="20px" color="white">
-            <HandleUpload />
+            <HandleUpload sendDataToParent={handleDataFromChild} />
           </Center>
         </Box>
         <TableComponent sharedData={dataFromChild} />
