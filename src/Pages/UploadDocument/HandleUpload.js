@@ -1,12 +1,13 @@
-import {createContext, useEffect, useState} from "react";
+import { useEffect, useState} from "react";
 import {Button, Center} from "@chakra-ui/react";
+import {redirect, useNavigate} from "react-router-dom";
 
 
 
 const HandleUpload = ({ sendDataToParent }) => {
     const [file, setFile] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
-
+    const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -19,6 +20,9 @@ const HandleUpload = ({ sendDataToParent }) => {
     }
 
     const uploadFile = (file) => {
+        if (file === null)
+            return;
+
         isLoadingToggle();
 
         const formData = new FormData();
@@ -34,6 +38,7 @@ const HandleUpload = ({ sendDataToParent }) => {
         fetch(url, requestOptions)
             .then(response => response.json())
             .then(result => sendDataToParent(result))
+            .then(() => navigate("/dashboard"))
             .then(() => isLoadingToggle())
             .catch(error => console.log('error', error));
     }
@@ -60,10 +65,10 @@ const HandleUpload = ({ sendDataToParent }) => {
                 accept="image/*"
                 onChange={(event) => {
                     setFile(prevFile => prevFile = event.target.files[0] || null );
-                    uploadFile(event.target.files[0]);
+                    uploadFile(event.target.files[0] || null);
                 }}
                 hidden
-            />
+               multiple={false}/>
         </div>
     );
 }

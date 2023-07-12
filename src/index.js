@@ -6,8 +6,10 @@ import {ChakraProvider} from "@chakra-ui/react";
 import {DevSupport} from "@react-buddy/ide-toolbox";
 import {ComponentPreviews, useInitial} from "./dev";
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
-import {Dashboard} from "./Pages/Dashboard/Dashboard";
+import {Dashboard} from "./Pages/Dashboard";
+import {MainPage} from "./Pages/MainPage";
 import UploadPage from "./Pages/UploadDocument/UploadPage";
+import {UploadPageLoader} from "./Pages/UploadDocument/UploadPageLoader";
 
 
 // TODO: Add Error Pages
@@ -18,9 +20,20 @@ const router = createBrowserRouter([
         element: <App/>,
         children: [
             {
+                path: "mainpage",
+                element: <MainPage />,
+            },
+            {
+                path: "uploadpage",
+                element: <UploadPage />,
+            },
+            {
                 path: "dashboard",
-                element: <Dashboard/>,
-            }
+                element: <Dashboard />,
+            },  {
+                path: "loader",
+                element: <UploadPageLoader />,
+            },
         ],
     },
 ]);

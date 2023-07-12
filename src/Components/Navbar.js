@@ -1,4 +1,3 @@
-import { ReactNode } from 'react';
 import {
   Box,
   Flex,
@@ -16,7 +15,14 @@ import {
   useColorModeValue,
   Stack,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+
+const avatarURL = {
+    url: 'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9',
+    anonURL: 'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9',
+};
+
+// anonyomys avatar
 
 const Links = ['Dashboard', 'Projects', 'Team'];
 
@@ -36,9 +42,9 @@ const NavLink = ({ children }) => {
   );
 };
 
-export default function withAction() {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+export default function Navbar({ isCurrentUser}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  console.log("Is Current User: ", isCurrentUser);
 
   return (
       <>
@@ -53,7 +59,9 @@ export default function withAction() {
                 onClick={isOpen ? onClose : onOpen}
             />
             <HStack spacing={8} alignItems={'center'}>
-              <Box>Logo</Box>
+              <Box><strong>
+                Main Page
+              </strong> </Box>
               <HStack
                   as={'nav'}
                   spacing={4}
@@ -64,27 +72,20 @@ export default function withAction() {
               </HStack>
             </HStack>
             <Flex alignItems={'center'}>
-              <Button
-                  variant={'solid'}
-                  colorScheme={'teal'}
-                  size={'sm'}
-                  mr={4}
-                  leftIcon={<AddIcon />}>
-                Action
-              </Button>
               <Menu>
                 <MenuButton
                     as={Button}
                     rounded={'full'}
                     variant={'link'}
                     cursor={'pointer'}
-                    minW={0}>
-                  <Avatar
-                      size={'sm'}
-                      src={
-                        'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
-                      }
-                  />
+                    minW={0}>{
+                    isCurrentUser ?  <Avatar
+                        size={'sm'}
+                        src={
+                          'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
+                        }
+                    /> : "Sign In/Up"
+                }
                 </MenuButton>
                 <MenuList>
                   <MenuItem>Link 1</MenuItem>

@@ -3,6 +3,9 @@ import {useEffect} from "react";
 
 
 // TODO: Make form editable;
+// TODO: Add total
+// TODO: Add date, store name, address,
+// TODO: Add Animation
 const TableComponent = ({sharedData}) => {
     let expensesKeys = [] ;
     if (sharedData !== null) {
@@ -16,7 +19,7 @@ const TableComponent = ({sharedData}) => {
     return (
         <TableContainer>
             <Table variant='simple'>
-                <TableCaption>Items bought in this store</TableCaption>
+                <TableCaption>{sharedData ? `Items you received from this store` : null}</TableCaption>
                 <Thead>
                     <Tr>
                         {sharedData !== null && expensesKeys.map((key, index) => {

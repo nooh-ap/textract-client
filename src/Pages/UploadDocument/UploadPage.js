@@ -11,36 +11,47 @@ const UploadPage = () => {
     setDataFromChild(data);
   };
 
+  const steps = [
+        {
+        id: 1,
+        title: 'Step 1',
+        description: 'Take a picture of your receipt',
+    },
+    {
+        id: 2,
+        title: 'Step 2',
+        description: 'Upload the picture',
+    },
+    {
+        id: 3,
+        title: 'Step 3',
+        description: 'View your receipt',
+    }];
   return (
     <div>
       <VStack spacing={4} align="stretch">
         <Box h="50px">
           <Center h="100px">
             <Heading>Upload Your Receipt!</Heading>
+          {/*    subheader*/}
           </Center>
         </Box>
-        <Container p="12">
-          <Stack spacing={3}>
-            <Text fontSize="xl">
-              <strong>Step 1:</strong> Get your receipt ready to be scanned
-            </Text>
-            <Text fontSize="xl">
-              <strong>Step 2:</strong> Open the Scanly app on your smartphone or
-              click the 'Upload Receipt' button on our website. You will be
-              prompted to upload a photo of your receipt.
-            </Text>
-            <Text fontSize="xl">
-              <strong>Step 3:</strong> Position your receipt and capture a clear
-              photo using your phone's camera. You can also upload a photo from
-              your phone's gallery.
-            </Text>
-          </Stack>
+        <Container p="8">
+            {
+                steps.map((step) => (
+                    <Box key={step.id} p={3} mt={4} borderRadius={8} shadow="md" borderWidth="1px">
+                        <Heading fontSize="xl">{step.title}</Heading>
+                        <Text mt={4}>{step.description}</Text>
+                    </Box>
+                ))
+            }
         </Container>
         <Box h="80px">
           <Center h="20px" color="white">
             <HandleUpload sendDataToParent={handleDataFromChild} />
           </Center>
         </Box>
+
         <TableComponent sharedData={dataFromChild} />
       </VStack>
     </div>
