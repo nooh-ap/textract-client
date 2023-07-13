@@ -1,18 +1,28 @@
-import {Card, CardBody, Flex, Heading, Text} from "@chakra-ui/react";
+import {
+    Card,
+    CardBody,
+    Flex,
+    Tab,
+    TabList,
+    TabPanels,
+    TabPanel,
+    Text,
+    Tabs,
+} from "@chakra-ui/react";
 
-const cardBody = []
+import TableComponent from "../Components/Table";
+
+
+
 export function Dashboard() {
     return (
         <>
-            <Heading>
-                <Text>Dashboard</Text>
-            </Heading>
-                <Flex>
-            <Card>
-                <CardBody p={4}>
+            <Flex mt={4} gap={3}>
+                <Card>
+                <CardBody p={4} >
                     <Text fontSize={'lg'}>
                         <Text>
-                            <strong>$325 </strong>
+                            <strong>$325</strong>
                         </Text>
                             <Text>Total Spending</Text>
                     </Text>
@@ -26,13 +36,25 @@ export function Dashboard() {
                             <Text>Receipts Scanned</Text>
                     </Text>
                 </CardBody>
-            </Card>
-            {/*<Card>*/}
-            {/*    <CardBody>*/}
+                </Card>
+            </Flex>
+            <Tabs mt={4}>
+                <TabList>
+                    <Tab>Reciepts</Tab>
+                    <Tab>Stores</Tab>
+                </TabList>
 
-            {/*    </CardBody>*/}
-            {/*</Card>*/}
-                </Flex>
+                <TabPanels>
+                    <TabPanel>
+                            <TableComponent sharedData={tableData} />
+                    </TabPanel> <TabPanel>
+                        <Text>Two</Text>
+                    </TabPanel>
+                </TabPanels>
+
+
+            </Tabs>
+
         </>
     )
 }

@@ -37,7 +37,9 @@ const HandleUpload = ({ sendDataToParent }) => {
 
         fetch(url, requestOptions)
             .then(response => response.json())
-            .then(result => sendDataToParent(result))
+            .then(result => {
+                sendDataToParent(result)
+            })
             .then(() => navigate("/dashboard"))
             .then(() => isLoadingToggle())
             .catch(error => console.log('error', error));

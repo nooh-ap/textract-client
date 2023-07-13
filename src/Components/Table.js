@@ -1,4 +1,4 @@
-import {Table, TableCaption, TableContainer, Tbody, Td, Th, Thead, Tr,} from '@chakra-ui/react'
+import {Heading, Table, TableCaption, TableContainer, Tbody, Td, Text, Th, Thead, Tr} from '@chakra-ui/react'
 import {useEffect} from "react";
 
 
@@ -12,18 +12,18 @@ const TableComponent = ({sharedData}) => {
         expensesKeys = Object.keys(sharedData['expenses'][0])
     }
 
-    useEffect(() => {
-        console.log(sharedData);
-    }, [sharedData]);
-
     return (
         <TableContainer>
+            <Text my={2 }>
+                {sharedData ? `Purchase: ${sharedData['summary']['INVOICE_RECEIPT_DATE']} ` : `Unknown Date`}<br/>
+                {sharedData ? `Amount: $${sharedData['summary']['TOTAL']}` : null}
+            </Text>
             <Table variant='simple'>
-                <TableCaption>{sharedData ? `Items you received from this store` : null}</TableCaption>
+                <TableCaption>{sharedData ? `Items you received from  ${sharedData['summary']['NAME']}` : null}</TableCaption>
                 <Thead>
                     <Tr>
                         {sharedData !== null && expensesKeys.map((key, index) => {
-                            return <Th key={index}>{key}</Th>;
+                            return <Th key={index} fontWeight={"extrabold"}>{key}</Th>;
                         })}
                     </Tr>
                 </Thead>
@@ -34,7 +34,9 @@ const TableComponent = ({sharedData}) => {
                             return (
                                 <Tr key={index}>
                                     {expensesKeys.map((key, index) => {
-                                        return <Td key={index}>{expense[key]}</Td>;
+                                        return <Td key={index}>
+                                            <Text>{expense[key].toLowerCase()}</Text>
+                                        </Td>;
                                     })}
                                 </Tr>
                             );

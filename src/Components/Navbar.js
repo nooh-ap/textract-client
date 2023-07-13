@@ -24,7 +24,7 @@ const avatarURL = {
 
 // anonyomys avatar
 
-const Links = ['Dashboard', 'Projects', 'Team'];
+const Links = ['Dashboard', 'Upload Page'];
 
 const NavLink = ({ children }) => {
   return (
@@ -36,15 +36,15 @@ const NavLink = ({ children }) => {
             textDecoration: 'none',
             bg: useColorModeValue('gray.200', 'gray.700'),
           }}
-          href={`/${children.toLowerCase()}`}>
+          href={`/${children.toLowerCase().replace(/\s/g, '')}`}>
         {children}
       </Link>
   );
 };
+// remove white space
 
 export default function Navbar({ isCurrentUser}) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  console.log("Is Current User: ", isCurrentUser);
 
   return (
       <>

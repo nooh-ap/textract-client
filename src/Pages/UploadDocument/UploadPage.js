@@ -1,15 +1,8 @@
 import {Box, Center, Container, Heading, Stack, Text, VStack} from "@chakra-ui/react";
 import HandleUpload from "./HandleUpload";
-import TableComponent from "../../Components/Table";
-import {useState} from "react";
 
 const UploadPage = () => {
-  const [dataFromChild, setDataFromChild] = useState(null);
 
-  const handleDataFromChild = (data) => {
-    // Process the data received from the child component
-    setDataFromChild(data);
-  };
 
   const steps = [
         {
@@ -48,11 +41,9 @@ const UploadPage = () => {
         </Container>
         <Box h="80px">
           <Center h="20px" color="white">
-            <HandleUpload sendDataToParent={handleDataFromChild} />
+            <HandleUpload handleDataChange={handleDataChange} />
           </Center>
         </Box>
-
-        <TableComponent sharedData={dataFromChild} />
       </VStack>
     </div>
   );
