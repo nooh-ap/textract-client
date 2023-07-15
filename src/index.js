@@ -10,7 +10,8 @@ import {Dashboard} from "./Pages/Dashboard";
 import {MainPage} from "./Pages/MainPage";
 import UploadPage from "./Pages/UploadDocument/UploadPage";
 import {UploadPageLoader} from "./Pages/UploadDocument/UploadPageLoader";
-
+import {Provider} from "react-redux";
+import {store} from "./Services/store";
 
 // TODO: Add Error Pages
 
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
             {
                 path: "dashboard",
                 element: <Dashboard />,
+                errorElement : <div>404</div>
             },  {
                 path: "loader",
                 element: <UploadPageLoader />,
@@ -39,6 +41,7 @@ const router = createBrowserRouter([
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+    <Provider store={store}>
     <ChakraProvider>
         <DevSupport ComponentPreviews={ComponentPreviews}
                     useInitialHook={useInitial}
@@ -46,6 +49,7 @@ root.render(
             <RouterProvider router={router}/>
         </DevSupport>
     </ChakraProvider>
+    </ Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function

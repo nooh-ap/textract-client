@@ -10,11 +10,16 @@ import {
     Tabs,
 } from "@chakra-ui/react";
 
+import {useSelector} from "react-redux";
 import TableComponent from "../Components/Table";
 
 
 
 export function Dashboard() {
+    const sharedData = useSelector(state => state.receipt);
+    const receipts = sharedData?.receipts ;
+    console.log(receipts);
+
     return (
         <>
             <Flex mt={4} gap={3}>
@@ -31,7 +36,7 @@ export function Dashboard() {
                 <CardBody p={4}>
                     <Text fontSize={'lg'} >
                         <Text >
-                            <strong>26 </strong>
+                            <strong>26</strong>
                         </Text>
                             <Text>Receipts Scanned</Text>
                     </Text>
@@ -40,19 +45,18 @@ export function Dashboard() {
             </Flex>
             <Tabs mt={4}>
                 <TabList>
-                    <Tab>Reciepts</Tab>
+                    <Tab>Receipts</Tab>
                     <Tab>Stores</Tab>
                 </TabList>
 
                 <TabPanels>
                     <TabPanel>
-                            <TableComponent sharedData={tableData} />
-                    </TabPanel> <TabPanel>
-                        <Text>Two</Text>
+                            <TableComponent  />
+                    </TabPanel>
+                    <TabPanel>
+
                     </TabPanel>
                 </TabPanels>
-
-
             </Tabs>
 
         </>

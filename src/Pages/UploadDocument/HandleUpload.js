@@ -1,13 +1,16 @@
 import { useEffect, useState} from "react";
 import {Button, Center} from "@chakra-ui/react";
-import {redirect, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {setData} from "../../Services/recieptSlice";
 
 
 
-const HandleUpload = ({ sendDataToParent }) => {
+const HandleUpload = ({buttonText}) => {
     const [file, setFile] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     useEffect(() => {
 
@@ -38,7 +41,7 @@ const HandleUpload = ({ sendDataToParent }) => {
         fetch(url, requestOptions)
             .then(response => response.json())
             .then(result => {
-                sendDataToParent(result)
+                dispatch(setData(result));
             })
             .then(() => navigate("/dashboard"))
             .then(() => isLoadingToggle())
@@ -57,7 +60,7 @@ const HandleUpload = ({ sendDataToParent }) => {
                     colorScheme="teal"
                     variant="solid"
                 >
-                    Click here to upload now
+                    { buttonText ? buttonText : "Click here to upload now"}
                 </Button>
             </Center>
 

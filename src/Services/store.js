@@ -1,24 +1,8 @@
-// store.js
-import { createStore } from 'redux';
+import { configureStore} from "@reduxjs/toolkit";
+import receiptReducer from "./recieptSlice";
 
-// Define initial state and reducer
-const initialState = {
-    data: '',
-};
-
-const reducer = (state = initialState, action) => {
-    switch (action.type) {
-        case 'SET_DATA':
-            return {
-                ...state,
-                data: action.payload,
-            };
-        default:
-            return state;
+export const store = configureStore({
+    reducer: {
+        receipt: receiptReducer,
     }
-};
-
-// Create the Redux store
-const store = createStore(reducer);
-
-export default store;
+});

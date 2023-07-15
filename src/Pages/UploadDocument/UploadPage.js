@@ -1,8 +1,7 @@
-import {Box, Center, Container, Heading, Stack, Text, VStack} from "@chakra-ui/react";
+import {Box, Center, Container, Heading, Text, VStack} from "@chakra-ui/react";
 import HandleUpload from "./HandleUpload";
 
 const UploadPage = () => {
-
 
   const steps = [
         {
@@ -41,7 +40,7 @@ const UploadPage = () => {
         </Container>
         <Box h="80px">
           <Center h="20px" color="white">
-            <HandleUpload handleDataChange={handleDataChange} />
+            <HandleUpload  />
           </Center>
         </Box>
       </VStack>

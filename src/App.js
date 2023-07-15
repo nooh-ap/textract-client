@@ -2,7 +2,10 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import {Outlet} from "react-router-dom";
-import {Flex, Heading} from "@chakra-ui/react";
+import {Button, Flex, Heading} from "@chakra-ui/react";
+import {useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
+import {setData} from "./Services/recieptSlice";
 
 const windowSize = {
     width: window.innerWidth,
@@ -16,8 +19,8 @@ const pageName  = {
     "/uploadpage": "Upload Page",
 }
 
-
 function App() {
+
     return (
         <>
             <Navbar isCurrentUser={false} />

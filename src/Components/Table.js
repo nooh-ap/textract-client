@@ -1,51 +1,59 @@
-import {Heading, Table, TableCaption, TableContainer, Tbody, Td, Text, Th, Thead, Tr} from '@chakra-ui/react'
-import {useEffect} from "react";
-
-
 // TODO: Make form editable;
 // TODO: Add total
 // TODO: Add date, store name, address,
 // TODO: Add Animation
-const TableComponent = ({sharedData}) => {
-    let expensesKeys = [] ;
-    if (sharedData !== null) {
-        expensesKeys = Object.keys(sharedData['expenses'][0])
-    }
+import {useSelector} from "react-redux";
+import {Table, TableContainer, Tbody, Th, Thead, Tr, Td} from "@chakra-ui/react";
+
+const TableComponent = () => {
+    const sharedData = useSelector(state => state.receipt);
+    const sharedDataHasValue = sharedData.receipts.length > 0;
+    const {expenses, summary} = sharedData.receipts[0] || {}
+    const expenseKeys = Object.keys(expenses[0]);
+
+    const keys = ["ITEM", "PRICE", "QUANTITY"]
+    console.log(expenses[0]);
+
+
 
     return (
-        <TableContainer>
-            <Text my={2 }>
-                {sharedData ? `Purchase: ${sharedData['summary']['INVOICE_RECEIPT_DATE']} ` : `Unknown Date`}<br/>
-                {sharedData ? `Amount: $${sharedData['summary']['TOTAL']}` : null}
-            </Text>
-            <Table variant='simple'>
-                <TableCaption>{sharedData ? `Items you received from  ${sharedData['summary']['NAME']}` : null}</TableCaption>
-                <Thead>
-                    <Tr>
-                        {sharedData !== null && expensesKeys.map((key, index) => {
-                            return <Th key={index} fontWeight={"extrabold"}>{key}</Th>;
-                        })}
-                    </Tr>
-                </Thead>
-                <Tbody>
-                    {
-                        sharedData !== null &&
-                        sharedData['expenses'].map((expense, index) => {
-                            return (
-                                <Tr key={index}>
-                                    {expensesKeys.map((key, index) => {
-                                        return <Td key={index}>
-                                            <Text>{expense[key].toLowerCase()}</Text>
-                                        </Td>;
-                                    })}
-                                </Tr>
-                            );
-                        })
-                    }
-                {/*    TODO: Add total */}
-                </Tbody>
-            </Table>
-        </TableContainer>
+            <TableContainer>
+                <Table>
+                    <Thead>
+                        <Tr>
+                            {
+                                keys.map((expense, index) => {
+                                    return (
+                                        <Th key={index}>
+                                            {keys[index]}
+                                        </Th>
+                                    );
+                                })
+                            }
+                        </Tr>
+                    </Thead>
+                    <Tbody>
+                        {
+                            expenses.map((expense, index) => {
+                                return (
+                                    <Tr key={index}>
+                                        {
+                                            expenseKeys.map((key, index) => {
+                                                return (
+                                                    <Td key={index}>
+                                                        {expense[key]}
+                                                    </Td>
+                                                );
+                                            }
+                                            )
+                                        }
+                                    </Tr>
+                                );
+                            })
+                        }
+                    </Tbody>
+                </Table>
+            </TableContainer>
     );
 };
 
