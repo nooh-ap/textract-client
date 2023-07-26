@@ -13,7 +13,13 @@
     },
     "categories": {
       "function": {
-        "textractclient5d57f1e6": {}
+        "textractclient5d57f1e6": {
+          "deploymentBucketName": "amplify-reciepttracker-main-20339-deployment",
+          "s3Key": "amplify-builds/textractclient5d57f1e6-653941796341536b2f54-build.zip"
+        }
+      },
+      "auth": {
+        "textractclient": {}
       }
     }
   },

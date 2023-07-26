@@ -8,10 +8,12 @@ import {ComponentPreviews, useInitial} from "./dev";
 import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import {Dashboard} from "./Pages/Dashboard";
 import {MainPage} from "./Pages/MainPage";
+import SignupCard from "./Pages/SignUp"
 import UploadPage from "./Pages/UploadDocument/UploadPage";
 import {UploadPageLoader} from "./Pages/UploadDocument/UploadPageLoader";
 import {Provider} from "react-redux";
 import {store} from "./Services/store";
+import SignIn from "./Pages/SignIn";
 
 // TODO: Add Error Pages
 
@@ -21,20 +23,26 @@ const router = createBrowserRouter([
         element: <App/>,
         children: [
             {
-                path: "mainpage",
-                element: <MainPage />,
+                path: "/",
+                element: <MainPage/>,
             },
             {
                 path: "uploadpage",
-                element: <UploadPage />,
+                element: <UploadPage/>,
             },
             {
                 path: "dashboard",
-                element: <Dashboard />,
-                errorElement : <div>404</div>
-            },  {
+                element: <Dashboard/>,
+                errorElement: <div>404</div>
+            }, {
                 path: "loader",
-                element: <UploadPageLoader />,
+                element: <UploadPageLoader/>,
+            }, {
+                path: "sign-up",
+                element: <SignupCard/>,
+            },{
+                path: "sign-in",
+                element: <SignIn/>,
             },
         ],
     },
@@ -42,13 +50,13 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <Provider store={store}>
-    <ChakraProvider>
-        <DevSupport ComponentPreviews={ComponentPreviews}
-                    useInitialHook={useInitial}
-        >
-            <RouterProvider router={router}/>
-        </DevSupport>
-    </ChakraProvider>
+        <ChakraProvider>
+            <DevSupport ComponentPreviews={ComponentPreviews}
+                        useInitialHook={useInitial}
+            >
+                <RouterProvider router={router}/>
+            </DevSupport>
+        </ChakraProvider>
     </ Provider>
 );
 

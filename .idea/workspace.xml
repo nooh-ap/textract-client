@@ -4,8 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b167149-6b7b-485d-a325-79ef984c939e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Pages/UploadDocument/UploadPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/UploadDocument/UploadPage.js" afterDir="false" />
+    <list default="true" id="9b167149-6b7b-485d-a325-79ef984c939e" name="Changes" comment="&quot;fix: remove the extra upload button&quot;">
+      <change afterPath="$PROJECT_DIR$/amplify/backend/auth/textractclient/cli-inputs.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/amplify/backend/function/textractclient5d57f1e6/src/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/SignIn.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/backend-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/backend-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/function/textractclient5d57f1e6/textractclient5d57f1e6-cloudformation-template.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/function/textractclient5d57f1e6/textractclient5d57f1e6-cloudformation-template.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/backend/types/amplify-dependent-resources-ref.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/backend/types/amplify-dependent-resources-ref.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/cli.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/cli.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amplify/team-provider-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/amplify/team-provider-info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dev/previews.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/dev/previews.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +54,12 @@
   "keyToString": {
     "Notification.DisplayName-DoNotAsk-Dependencies from package.json": "Dependencies from package.json available",
     "Notification.DoNotAsk-Dependencies from package.json": "true",
-    "ReactCreateComponentLastSelected": "functionDeclarationComponent",
+    "ReactCreateComponentLastSelected": "arrowFunctionComponent",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "js.last.introduce.type": "CONST",
     "last_opened_file_path": "/Users/noohalmahfoodi/RiderProjects/textract-client",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -54,7 +67,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -107,6 +120,11 @@
       <workItem from="1688988354636" duration="334000" />
       <workItem from="1688989287680" duration="941000" />
       <workItem from="1689029521593" duration="35349000" />
+      <workItem from="1689288484222" duration="21192000" />
+      <workItem from="1690071417316" duration="86000" />
+      <workItem from="1690071558402" duration="203000" />
+      <workItem from="1690071786070" duration="2159000" />
+      <workItem from="1690254892276" duration="4285000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;Updated UploadFunction.js to upload image file instead of camera&quot;">
       <option name="closed" value="true" />

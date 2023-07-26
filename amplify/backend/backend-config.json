@@ -1,9 +1,60 @@
 {
+  "auth": {
+    "textractclient": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "PREFERRED_USERNAME"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
   "function": {
     "textractclient5d57f1e6": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_textractclient5d57f1e6_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "textractclient5d57f1e6"
+        }
+      ]
+    },
+    "AMPLIFY_function_textractclient5d57f1e6_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "textractclient5d57f1e6"
+        }
+      ]
     }
   }
 }

@@ -6,6 +6,7 @@ import WithSubnavigation from "../Components/Navbar";
 import SocialButton from "../Components/Footer";
 import NavLink from "../Components/Navbar";
 import TableComponent from "../Components/Table";
+import {Dashboard} from "../Pages/Dashboard";
 
 const ComponentPreviews = () => {
     return (
@@ -24,6 +25,9 @@ const ComponentPreviews = () => {
             </ComponentPreview>
             <ComponentPreview path="/TableComponent">
                 <TableComponent/>
+            </ComponentPreview>
+            <ComponentPreview path="/Dashboard">
+                <Dashboard/>
             </ComponentPreview>
         </Previews>
     )
